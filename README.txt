@@ -13,6 +13,7 @@ TIMELINE:
   
   
  CODE STRUCUTRE:
+  Written in c++ standard 11, utilizing standard library string and IO
   Included files "LinkedList.h", "ResourceManager.cpp", "ResourceManager.h", "main.cpp", and "makefile"
   All code is stored in root directory of project
   The main method for execution is located in main.cpp
