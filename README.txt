@@ -2,6 +2,7 @@ AUThOR:
   Justin Cain 
   @AffinityForFun
   jwcain@mtu.edu
+  jwcain.github.io
 
 TIMELINE:
   Started: 11/22/2018
