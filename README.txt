@@ -7,8 +7,8 @@ AUThOR:
 TIMELINE:
   Started: 11/22/2018
   Base Functionality completed per assgnment: 11/23/2018
-  Extra commands added: 11/23/2048-11/25/2028
-  Memory leaks removed: 11/25/2028
+  Extra commands added: 11/23/2018-11/25/2018
+  Memory leaks removed: 11/25/2018
   
   
   
