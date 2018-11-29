@@ -1,6 +1,0 @@
-phaser crystal
-shield crystal
-turret bullets
-bombs ore
-bullets ore
-handgun bullets
