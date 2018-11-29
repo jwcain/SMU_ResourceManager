@@ -9,7 +9,7 @@
 #include "LinkedList.h"
 
 //The default file name to load/save graph from
-const char* defaultFileName = "resources.txt";
+std::string fileName = "resources.txt";
 //The current ResourceManager instance
 ResourceManager* rM;
 
@@ -113,7 +113,7 @@ bool Command_Delete(std::vector<std::string> argv) {
 // </summary>
 bool Command_Exit(std::vector<std::string> argv) {
 	std::cout << "Exit..." << "\n";
-	rM->Save(defaultFileName);
+	rM->Save(fileName.c_str());
 	delete rM;
 	exit(1);
 	return true;
@@ -129,7 +129,7 @@ bool Command_Save(std::vector<std::string> argv) {
 		rM->Save(argv[0].c_str());
 	else
 		//Otherwise save to default
-		rM->Save(defaultFileName);
+		rM->Save(fileName.c_str());
 	return true;
 }
 // <summary>
@@ -314,7 +314,10 @@ struct Command command_merge = {"merge", "Merges other resource file(s) into thi
 // <summary>
 // Executes a resource manager sim
 // </summary>
-int main() {
+int main(int argc, char** argv) {
+
+	
+	
 	//Place the commands into the command array. This is done here to ease scope/compilation issues.
 	commands[0] = command_delete;
 	commands[1] = command_exit;
@@ -329,17 +332,23 @@ int main() {
 	
 	//Load a resource manager instance
 	rM = new ResourceManager();
-	rM->Load(defaultFileName, true);
+	//Check if user passed in a file name for us to use
+	if (argc == 2) {
+		//Get the file name as a string
+		std::string inFileName = argv[1];
+		//Set that name as our file name
+		fileName = inFileName;
+	}
+	//Load the file
+	rM->Load(fileName.c_str(), true);
 	
 	//Enter execution loop
 	while (1) {
-		std::cout << "new loop";
 		//Display the links
 		rM->VisualizeAsText();
-		std::cout << "Post visualiz3";
 		//Display usability
 		rM->DisplayUsability();
-		std::cout << "Post usability1";
+		
 		std::cout <<"---\t---\t---\t---\t---\t---\t\n";
 		std::cout << "Enter a command: ";
 		//Get a line of user input
@@ -363,16 +372,12 @@ int main() {
 				splitInput.erase(splitInput.begin());
 				//Execute the command
 				commands[i].execute(splitInput);
-				std::cout << "post exectution\n";
 				break;
 			}
 		}
-		std::cout << "postfore\n";
 		//If we have not found a command, let the user know their input was invalid
 		if (foundFlag == false)
 			std::cout << "Unrecognized command. Type help for a list of commands." << "\n";
-		std::cout << "Ater if\n";
 		std::cout <<"---\t---\t---\t---\t---\t---\t\n";
-		std::cout << "end loop\n";
 	}
 }

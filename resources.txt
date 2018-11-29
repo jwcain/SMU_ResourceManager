@@ -1,5 +1,6 @@
-handgun bullets
+phaser crystal
+shield crystal
+turret bullets
 bombs ore
 bullets ore
-turret bullets
-wall turret
+handgun bullets

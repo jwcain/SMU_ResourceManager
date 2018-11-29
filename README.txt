@@ -2,9 +2,10 @@ SMU Assignment 1 - Resource Manager
   https://github.com/jwcain/SMU_ResourceManager
   TIMELINE:
       Started: 11/22/2018
-      Base Functionality completed per assgnment: 11/23/2018
+      Base Functionality completed per assignment: 11/23/2018
       Extra commands added: 11/23/2018-11/25/2018
       Memory leaks removed: 11/25/2018
+	  Touch up before submission: 11/28/2018
 AUTHOR:
   Justin Cain 
   @AffinityForFun
@@ -19,7 +20,9 @@ CODE STRUCUTRE:
   A Makefile is provided to compile the program.
   The program is compiled to "ResourceManager"
   The program is a command line/terminal program
-  No arguments from command line are taken, but the program takes input from standard in.
+  The program may be ran with or without an argument. The argument is the file to be read, no argument 
+  reads the default file 'resources.txt'. If the file does not exist it is created.
+  The program operates by user commands entered through standard in.
   
 INFO:
   The code was developed and tested on MTU's linux server colossus.it.mtu.edu
@@ -37,10 +40,10 @@ INFO:
   
   I created my own data structure to hold most of my elements in the resource manager. This was done
   so I could have better control over how the data was being handled, and I was interested in exploring
-  generics in C++ . A substition for any other standard containter should be possible.
+  generics in C++ . A substitution for any other standard container should be possible.
   
   The graph is maintained by a series of nodes with implicit, directed links. The links are stored implicitly
-  so the manager can tell why a resource is unusable (beacuse it cannot locate a node for the implicit link).
+  so the manager can tell why a resource is unusable (because it cannot locate a node for the implicit link).
   
   The simulate for the resource manager and file IO is handled in one individual class, as well as methods
   for displaying resource manager information to the terminal.
@@ -56,10 +59,10 @@ INFO:
   so management of argument input was easier.
   
   Additional commands created include, help, link/unlink, save, check, merge. and clear.
-  Saving is done by represting the graph via its implicit links, all nodes are reconstructed from these implicit links
+  Saving is done by representing the graph via its implicit links, all nodes are reconstructed from these implicit links
   with no duplicate resource nodes.
-  Check is a command that searches the graph for two sets of information. First, it caluclates if any node is 'orphaned'.
-  Being orphaned means it has no links outwards and no other nodes linking inward, and as a concequence will be represented
+  Check is a command that searches the graph for two sets of information. First, it calculates if any node is 'orphaned'.
+  Being orphaned means it has no links outwards and no other nodes linking inward, and as a consequence will be represented
   in a save.
   The remaining functions are understandable in their short descriptions below.
   
