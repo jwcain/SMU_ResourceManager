@@ -298,6 +298,8 @@ ResourceManager::~ResourceManager() {
 	for (unsigned int i = 0; i < nodes->GetSize(); i++) {
 		delete resources[i];
 	}
-	delete[] resources;
-	delete nodes;
+	if (resources)
+		delete[] resources;
+	if (nodes)
+		delete nodes;
 }

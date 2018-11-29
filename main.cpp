@@ -26,7 +26,7 @@ struct Command {
 	CommandFunction execute;
 };
 //The total number of commands
-const int commandCount = 11;
+const int commandCount = 10;
 //The list of available commands
 Command commands[commandCount];
 
@@ -294,14 +294,7 @@ bool Command_Merge(std::vector<std::string> argv) {
 	return true;
 }
 
-// <summary>
-// deletes and remakes the resource manager
-// </summary>
-bool Command_Clear(std::vector<std::string> argv) {
-	delete rM;
-	rM = new ResourceManager();
-	return true;
-}
+
 
 
 //Create structures for all of the commands
@@ -315,7 +308,6 @@ struct Command command_unlink = {"unlink", "Unlinks a node a->n", Command_Unlink
 struct Command command_save = {"save", "saves the graph to a file (resources.txt if no file path specified)", Command_Save};
 struct Command command_integrity = {"check", "Checks if node(s) link or are linked to, and for recursive dependency.", Command_Integrity};
 struct Command command_merge = {"merge", "Merges other resource file(s) into this one", Command_Merge};
-struct Command command_clear = {"newGraph", "Clears this graph and starts a new one. Does not save current to file.", Command_Clear};
 
 
 
@@ -334,7 +326,6 @@ int main() {
 	commands[7] = command_integrity;
 	commands[8] = command_q;
 	commands[9] = command_merge;
-	commands[10] = command_clear;
 	
 	//Load a resource manager instance
 	rM = new ResourceManager();
@@ -342,10 +333,13 @@ int main() {
 	
 	//Enter execution loop
 	while (1) {
+		std::cout << "new loop";
 		//Display the links
 		rM->VisualizeAsText();
+		std::cout << "Post visualiz3";
 		//Display usability
 		rM->DisplayUsability();
+		std::cout << "Post usability1";
 		std::cout <<"---\t---\t---\t---\t---\t---\t\n";
 		std::cout << "Enter a command: ";
 		//Get a line of user input
@@ -369,12 +363,16 @@ int main() {
 				splitInput.erase(splitInput.begin());
 				//Execute the command
 				commands[i].execute(splitInput);
+				std::cout << "post exectution\n";
 				break;
 			}
 		}
+		std::cout << "postfore\n";
 		//If we have not found a command, let the user know their input was invalid
 		if (foundFlag == false)
 			std::cout << "Unrecognized command. Type help for a list of commands." << "\n";
+		std::cout << "Ater if\n";
 		std::cout <<"---\t---\t---\t---\t---\t---\t\n";
+		std::cout << "end loop\n";
 	}
 }
