@@ -86,5 +86,3 @@ USAGE:
       merge   <filename>*     :  Merges other resource file(s) into this one
      
     Unrecognized commands will discarded, and the help command will be recommended.
-
-  
