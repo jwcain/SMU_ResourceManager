@@ -1,11 +1,11 @@
 SMU Assignment 1 - Resource Manager
   https://github.com/jwcain/SMU_ResourceManager
-  TIMELINE:
-      Started: 11/22/2018
-      Base Functionality completed per assignment: 11/23/2018
-      Extra commands added: 11/23/2018-11/25/2018
-      Memory leaks removed: 11/25/2018
-	  Touch up before submission: 11/28/2018
+ TIMELINE:
+	Started: 11/22/2018
+ 	Base Functionality completed per assignment: 11/23/2018
+ 	Extra commands added: 11/23/2018-11/25/2018
+ 	Memory leaks removed: 11/25/2018
+	Touch up before submission: 11/28/2018
 AUTHOR:
   Justin Cain 
   @AffinityForFun
