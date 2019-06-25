@@ -11,7 +11,6 @@ AUTHOR:
   @AffinityForFun
   https://www.affinityforfun.com
   jwcain@mtu.edu
-  jwcain.github.io
   
 CODE STRUCUTRE:
   Written in c++ standard 11, utilizing standard library string and IO
