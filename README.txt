@@ -7,8 +7,9 @@ SMU Assignment 1 - Resource Manager
  	Memory leaks removed: 11/25/2018
 	Touch up before submission: 11/28/2018
 AUTHOR:
-  Justin Cain 
+  Justin W. Cain 
   @AffinityForFun
+  https://www.affinityforfun.com
   jwcain@mtu.edu
   jwcain.github.io
   
