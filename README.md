@@ -34,7 +34,7 @@ During the development of the resource manager, I realize I wanted a flexible, g
 
 With the resource manager class operating, I began working on user input, developing an abstraction for commands. 
 
-![Command Abstraction Image](Images/Resource%20Manager.png)
+![Command Abstraction Image](Images/Resource%20Manager_%20Command%20Struct2.png)
 
 This allowed me to be flexible in developing commands as I discovered their need.
 
