@@ -1,4 +1,5 @@
 # SMU Assignment 1 - Resource Manager
+![Cover Image](Images/Resource%20Manager.png)
 ## [Assingmnent Details](https://www.smu.edu/Guildhall/Admissions/Portfolio-Requirements/Programming)
 ## Timeline
 - Started: 11/22/2018
@@ -33,11 +34,11 @@ During the development of the resource manager, I realize I wanted a flexible, g
 
 With the resource manager class operating, I began working on user input, developing an abstraction for commands. 
 
-(IMAGE MISSING)
+![Command Abstraction Image](Images/Resource%20Manager.png)
 
 This allowed me to be flexible in developing commands as I discovered their need.
 
-(IMAGE MISSING)
+![Commands Image](Images/Resource%20Manager_%20Implemented%20Commands.png)
 
 Of these commands, I believe the ‘Integrity’ command is the most crucial feature not included within the assignment. While thinking through the user workflow, I realized there was potential for the user to create dead links as well as recursively linked resources. As the resource system grows in scale, it becomes difficult to check for these inconsistencies manually and should be handled by the program. In other words, this is a data related task that should not be the responsibility of the user.
 
