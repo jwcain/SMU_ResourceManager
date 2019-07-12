@@ -1,18 +1,19 @@
-SMU Assignment 1 - Resource Manager
-  https://github.com/jwcain/SMU_ResourceManager
- TIMELINE:
-	Started: 11/22/2018
- 	Base Functionality completed per assignment: 11/23/2018
- 	Extra commands added: 11/23/2018-11/25/2018
- 	Memory leaks removed: 11/25/2018
-	Touch up before submission: 11/28/2018
-AUTHOR:
-  Justin W. Cain 
-  @AffinityForFun
-  https://www.affinityforfun.com
-  jwcain@mtu.edu
+# SMU Assignment 1 - Resource Manager
+
+## TIMELINE
+- Started: 11/22/2018
+- Base Functionality completed per assignment: 11/23/2018
+- Extra commands added: 11/23/2018-11/25/2018
+- Memory leaks removed: 11/25/2018
+- Touch up before submission: 11/28/2018
+
+## AUTHOR
+- Justin W. Cain 
+- @AffinityForFun
+- jwcain@mtu.edu
+- jwcain.github.io/Portfolio/
   
-CODE STRUCUTRE:
+## CODE STRUCUTRE
   Written in c++ standard 11, utilizing standard library string and IO
   Included files "LinkedList.h", "ResourceManager.cpp", "ResourceManager.h", "main.cpp", and "makefile"
   All code is stored in root directory of project
@@ -24,7 +25,7 @@ CODE STRUCUTRE:
   reads the default file 'resources.txt'. If the file does not exist it is created.
   The program operates by user commands entered through standard in.
   
-INFO:
+## INFO
   The code was developed and tested on MTU's linux server colossus.it.mtu.edu
   It was created to add to my graduate application to SMU Guildhall as per
   their assignment 1 recommendation.
@@ -69,13 +70,14 @@ INFO:
   DEVIATION FROM ASSIGNMENT: node deletion was given a command `delete` in order to allow for better
   support for many commands.
   
-USAGE:
+## USAGE
   Resource names are limited to 255 characters (due to the buffer size for scanning).
   Starting the program will cause the contents of resources.txt from the local directory to be loaded.
   If the file does not exist, execution will continue with an empty graph.
   The program runs in a loop, first showing a current graph display and the usability of each resource.
   Then, it will prompt for a command.
   The following commands are legal.
+  ```
     COMMANDS: (Name <...> - required [] - optional * - none, one, or more)
       delete  <node> [node]*  :  Deletes node(s) from the graph
       exit                    :   Exits the manager
@@ -89,3 +91,4 @@ USAGE:
       merge   <filename>*     :  Merges other resource file(s) into this one
      
     Unrecognized commands will discarded, and the help command will be recommended.
+    ```
