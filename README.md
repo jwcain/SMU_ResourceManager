@@ -26,49 +26,26 @@
   The program operates by user commands entered through standard in.
   
 ## INFO
-  The code was developed and tested on MTU's linux server colossus.it.mtu.edu
-  It was created to add to my graduate application to SMU Guildhall as per
-  their assignment 1 recommendation.
-  
-  I was able to get a working version of the project in two days, most of the first day was spent 
-  trying to get a c++ workflow working on my computer. Not having much success, I remotely
-  developed the program on my campus's Linux server.
-  
-  This project was checked for memory leaks using valgrind. I was able to reduce these memory leaks
-  down to a few  `still reachable` non-erroring bytes that appear to be from the use of the string
-  standard library and some related operations. My testing seems to show it is essentially leak
-  free.
-  
-  I created my own data structure to hold most of my elements in the resource manager. This was done
-  so I could have better control over how the data was being handled, and I was interested in exploring
-  generics in C++ . A substitution for any other standard container should be possible.
-  
-  The graph is maintained by a series of nodes with implicit, directed links. The links are stored implicitly
-  so the manager can tell why a resource is unusable (because it cannot locate a node for the implicit link).
-  
-  The simulate for the resource manager and file IO is handled in one individual class, as well as methods
-  for displaying resource manager information to the terminal.
-  
-  User IO is handled through standard in/out in the terminal. The user is shown the current state of the graph,
-  the usability of each resource, and is prompted for a command entry. The user is shown the command and then
-  the program repeats, showing the current state of the graph etc. Execution is terminated via the exit command
-  or its alias 'q'.
-  
-  Multiple command managed is handled but a Command struct, where the name, description, and a function pointer is
-  stored. The function takes in a vector of strings as arguments. The reason I used a vector here instead of the
-  linked list I developed was due to wanting to use a standard library function to split user input on whitespace
-  so management of argument input was easier.
-  
-  Additional commands created include, help, link/unlink, save, check, merge. and clear.
-  Saving is done by representing the graph via its implicit links, all nodes are reconstructed from these implicit links
-  with no duplicate resource nodes.
-  Check is a command that searches the graph for two sets of information. First, it calculates if any node is 'orphaned'.
-  Being orphaned means it has no links outwards and no other nodes linking inward, and as a consequence will be represented
-  in a save.
-  The remaining functions are understandable in their short descriptions below.
-  
-  DEVIATION FROM ASSIGNMENT: node deletion was given a command `delete` in order to allow for better
-  support for many commands.
+In the beginning, I assumed that the base level of this assignment was too easy; they wanted applicants to show creativity with extra features. On this assumption, I created the base functionality as straightforward as possible to validate my assumption and maximize development time for extending the project.
+
+My first goal was to establish any code that relied on exterior input, namely IO operations and user input handling. Logically, it made sense to develop IO operations first as user input was moot without data. While developing the IO operations, I decided to keep file IO encapsulated within a ‘ResourceManager’ class. This better separated the state of the program and the functionality.
+
+During the development of the resource manager, I realize I wanted a flexible, generic list class. My two options were to find something in the STL or write one myself. I chose the latter, deviating from the assignment description. My understanding of the assignment put extensibility and customizability as my two primary goals. Writing my own data-structure maximized my control over the data and furthered my pursuit of those goals.  This is in contrast with strings, where I used STL strings, as string implementation was minimal to those goals.
+
+With the resource manager class operating, I began working on user input, developing an abstraction for commands. 
+
+(IMAGE MISSING)
+
+This allowed me to be flexible in developing commands as I discovered their need.
+
+(IMAGE MISSING)
+
+Of these commands, I believe the ‘Integrity’ command is the most crucial feature not included within the assignment. While thinking through the user workflow, I realized there was potential for the user to create dead links as well as recursively linked resources. As the resource system grows in scale, it becomes difficult to check for these inconsistencies manually and should be handled by the program. In other words, this is a data related task that should not be the responsibility of the user.
+
+## Reflection
+Overall, I am happy with how I was able to separate and enable user input for commands.  I believe I accomplished the goal of building a better version of the assignment than described while making conscious decisions on every deviation and new features I added.
+
+In the future, I would like to build a graphical version of the assignment. A graphical version would allow for more rigid input from the user and give the user a better understanding of the resource model.
   
 ## USAGE
   Resource names are limited to 255 characters (due to the buffer size for scanning).
