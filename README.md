@@ -1,19 +1,19 @@
 # SMU Assignment 1 - Resource Manager
 
-## TIMELINE
+## Timeline
 - Started: 11/22/2018
 - Base Functionality completed per assignment: 11/23/2018
 - Extra commands added: 11/23/2018-11/25/2018
 - Memory leaks removed: 11/25/2018
 - Touch up before submission: 11/28/2018
 
-## AUTHOR
+## Author
 - Justin W. Cain 
 - @AffinityForFun
 - jwcain@mtu.edu
 - jwcain.github.io/Portfolio/
   
-## CODE STRUCUTRE
+## Code Strucutre
   Written in c++ standard 11, utilizing standard library string and IO
   Included files "LinkedList.h", "ResourceManager.cpp", "ResourceManager.h", "main.cpp", and "makefile"
   All code is stored in root directory of project
@@ -25,7 +25,7 @@
   reads the default file 'resources.txt'. If the file does not exist it is created.
   The program operates by user commands entered through standard in.
   
-## INFO
+## Process
 In the beginning, I assumed that the base level of this assignment was too easy; they wanted applicants to show creativity with extra features. On this assumption, I created the base functionality as straightforward as possible to validate my assumption and maximize development time for extending the project.
 
 My first goal was to establish any code that relied on exterior input, namely IO operations and user input handling. Logically, it made sense to develop IO operations first as user input was moot without data. While developing the IO operations, I decided to keep file IO encapsulated within a ‘ResourceManager’ class. This better separated the state of the program and the functionality.
@@ -47,7 +47,7 @@ Overall, I am happy with how I was able to separate and enable user input for co
 
 In the future, I would like to build a graphical version of the assignment. A graphical version would allow for more rigid input from the user and give the user a better understanding of the resource model.
   
-## USAGE
+## Usage
   Resource names are limited to 255 characters (due to the buffer size for scanning).
   Starting the program will cause the contents of resources.txt from the local directory to be loaded.
   If the file does not exist, execution will continue with an empty graph.
