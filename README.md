@@ -11,7 +11,7 @@
 - Justin W. Cain 
 - @AffinityForFun
 - jwcain@mtu.edu
-- jwcain.github.io/Portfolio/
+- [Portfolio](https://jwcain.github.io/Portfolio/)
   
 ## Code Strucutre
   Written in c++ standard 11, utilizing standard library string and IO
