@@ -1,5 +1,5 @@
 # SMU Assignment 1 - Resource Manager
-
+## [Assingmnent Details](https://www.smu.edu/Guildhall/Admissions/Portfolio-Requirements/Programming)
 ## Timeline
 - Started: 11/22/2018
 - Base Functionality completed per assignment: 11/23/2018
