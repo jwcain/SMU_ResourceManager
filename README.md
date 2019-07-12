@@ -14,16 +14,15 @@
 - [Portfolio](https://jwcain.github.io/Portfolio/)
   
 ## Code Strucutre
-  Written in c++ standard 11, utilizing standard library string and IO
-  Included files "LinkedList.h", "ResourceManager.cpp", "ResourceManager.h", "main.cpp", and "makefile"
-  All code is stored in root directory of project
-  The main method for execution is located in main.cpp
-  A Makefile is provided to compile the program.
-  The program is compiled to "ResourceManager"
-  The program is a command line/terminal program
-  The program may be ran with or without an argument. The argument is the file to be read, no argument 
-  reads the default file 'resources.txt'. If the file does not exist it is created.
-  The program operates by user commands entered through standard in.
+- Written in c++ standard 11, utilizing standard library string and IO
+- Included files "LinkedList.h", "ResourceManager.cpp", "ResourceManager.h", "main.cpp", and "makefile"
+- All code is stored in root directory of project
+- The main method for execution is located in main.cpp
+- A Makefile is provided to compile the program.
+- The program is compiled to "ResourceManager"
+- The program is a command line/terminal program
+- The program may be ran with or without an argument. The argument is the file to be read, no argument reads the default file 'resources.txt'. If the file does not exist it is created.
+- The program operates by user commands entered through standard input.
   
 ## Process
 In the beginning, I assumed that the base level of this assignment was too easy; they wanted applicants to show creativity with extra features. On this assumption, I created the base functionality as straightforward as possible to validate my assumption and maximize development time for extending the project.
