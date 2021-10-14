@@ -10,9 +10,8 @@
 
 ## Author
 - Justin W. Cain 
-- @AffinityForFun
-- jwcain@mtu.edu
-- [Portfolio](https://jwcain.github.io/Portfolio/)
+- contact@justinwcain.com
+- [Portfolio](https://www.justinwcain.com)
   
 ## Code Strucutre
 - Written in c++ standard 11, utilizing standard library string and IO
